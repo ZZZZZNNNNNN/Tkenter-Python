@@ -1,0 +1,27 @@
+import tkinter as tk
+BG_COLOR = "#121212"  # Dark background
+FG_COLOR = "#ffffff"  # White text
+BTN_COLOR = "#00adb5"  # Teal buttons
+FONT_MAIN = ("Cooper Black", 14, "bold")
+FONT_TITLE = ("Cooper Black", 20, "bold")
+
+
+def Lock_and_unlock():
+    app = tk.Tk()
+    app.title("Lock and Unlock")
+    app.geometry("420x520")
+    app.configure(bg="#101820")
+
+    tk.Label(app, text="🚦 Lock and Unlock", font=FONT_TITLE, bg="#101820", fg="#00ffcc").pack(pady=20)
+
+    status_label = tk.Label(app, text="LIGHT: OFF", font=("Cooper Black", 16, "bold"), bg="#101820", fg="white")
+    status_label.pack(pady=15)
+
+    timer_label = tk.Label(app, text="TIMER: 0", font=("Cooper Black", 14, "bold"), bg="#101820", fg="yellow")
+    timer_label.pack(pady=10)
+
+    running = [False]
+
+    app.mainloop()
+
+
