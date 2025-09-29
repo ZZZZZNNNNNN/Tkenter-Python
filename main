@@ -5,7 +5,11 @@ from humidity import *
 from lus import *
 from ids import *
 from dm import *
+import serial
 import time
+
+
+
 
 
 BG_COLOR = "#121212"  # Dark background
