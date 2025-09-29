@@ -27,29 +27,28 @@ def traffic_light_control():
             canvas.itemconfig(red_light, fill="red")
             canvas.itemconfig(yellow_light, fill="gray")
             canvas.itemconfig(green_light, fill="gray")
-            window.update()
+            app.update()
             time.sleep(10)
 
             canvas.itemconfig(red_light, fill="gray")
             canvas.itemconfig(yellow_light, fill="yellow")
-            window.update()
+            app.update()
             time.sleep(5)
 
             canvas.itemconfig(yellow_light, fill="gray")
             canvas.itemconfig(green_light, fill="green")
-            window.update()
+            app.update()
             time.sleep(10)
 
             canvas.itemconfig(green_light, fill="gray")
             canvas.itemconfig(yellow_light, fill="yellow")
-            window.update()
+            app.update()
             time.sleep(5)
 
-    window = tk.Tk()
-    window.title("Traffic Light Simulation")
-    window.geometry("200x400")
+    app.title("Traffic Light Simulation")
+    app.geometry("200x400")
 
-    canvas = tk.Canvas(window, width=200, height=400, bg="white")
+    canvas = tk.Canvas(app, width=200, height=400, bg="white")
     canvas.pack()
 
     canvas.create_rectangle(50, 50, 150, 250, fill="black")
@@ -58,8 +57,8 @@ def traffic_light_control():
     yellow_light = canvas.create_oval(75, 120, 125, 170, fill="gray")
     green_light = canvas.create_oval(75, 180, 125, 230, fill="gray")
 
-    window.after(100, change_light)
-    window.mainloop()
+    app.after(100, change_light)
+    app.mainloop()
 
 
 
